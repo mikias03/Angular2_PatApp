@@ -1,0 +1,14 @@
+<div class="patient-list">
+	<h3>Patients:</h3>
+	<ul class="list-group">
+	  <li *ngFor="let patient of patients" class="list-group-item">
+	  <span style="padding-right: 30px; color: blue">{{patient.name}}</span>
+	  <span style="padding-left: 30px; padding-right: 30px">PatientID: {{patient.patientID}}</span>
+	  <span style="padding-left: 30px; padding-right: 30px">{{patient.dob}}</span>
+	  <span style="padding-left: 30px; padding-right: 30px">{{patient.serviceID}}</span>
+	  <span style="padding-left: 30px;">{{patient.service}}</span>
+	  </li>
+	</ul>
+
+</div>
+<p class="error" *ngIf="errorMessage">{{errorMessage}}</p>

@@ -1,0 +1,29 @@
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+/* CSS used here will be applied after bootstrap.css */
+.badge-notify{
+   background:#9966ff;
+   position:relative;
+   top: -15px;
+   left: -5px;
+}
+.badge-notify2{
+   background:red;
+   position:relative;
+   top: -15px;
+   left: -5px;
+}
+ul {
+  list-style-type: none;
+}
+.patient-list{
+  margin-left: 15%;
+  margin-top: 15%;
+  margin-right: 15%;
+  max-width: 700px;
+
+}
