@@ -98,7 +98,7 @@
 		
 					<ul class="list-group">
 					
-					  <li *ngFor="let patient of patients" class="list-group-item" style="border-color: #7b7c7c; margin: 5px; align-items: center;">
+					  <li *ngFor="let patient of patients | paginate: {itemsPerPage: 10, currentPage:page, id: '1'}; let i = index" class="list-group-item" style="border-color: #7b7c7c; margin: 5px; align-items: center;">
 					  <span style="color: blue">{{patient.name}}</span>
 					  <span style="padding-left: 30px; padding-right: 30px">Patient ID: {{patient.patientID}}</span>
 					  <span style="padding-left: 30px; padding-right: 30px">Date of birth: {{patient.dob}}</span>
@@ -109,7 +109,13 @@
 			
 
 					  </li>
+					  <li style="border-color: #7b7c7c; margin-left: 20%; margin-right: 20%;align-items: center; border: 1.5px solid #737373; background-color: #fff;"><pagination-controls (pageChange)="page = $event" id="1"
+                      maxSize="10"
+                      directionLinks="true"
+                      autoHide="true">
+                	</pagination-controls></li>
 					</ul>
+					
 
 				</div>
 	        </div>

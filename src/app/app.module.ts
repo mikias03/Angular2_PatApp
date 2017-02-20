@@ -4,7 +4,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { requestOptionsProvider }   from './default-request-options.service';
 import { FormsModule }   from '@angular/forms';
 import { AppComponent }             from './app.component';
-
+import {Ng2PaginationModule} from 'ng2-pagination';
 import { PatientComponent }        from './Patient/patient.component';
 
 
@@ -12,7 +12,8 @@ import { PatientComponent }        from './Patient/patient.component';
   imports: [
     BrowserModule,
     HttpModule,
-    JsonpModule
+    JsonpModule,
+    Ng2PaginationModule
   ],
   declarations: [
     AppComponent,

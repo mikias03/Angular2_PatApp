@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import { Patient }              from './patient';
 import { PatientService }       from './patient.service';
-import { serviceFilter } from './filter.pipe';
+import {PaginatePipe, PaginationControlsComponent, PaginationService} from 'ng2-pagination';
 @Component({
   moduleId: module.id,
   selector: 'patient-list',

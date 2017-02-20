@@ -13,6 +13,7 @@ var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require('@angular/http');
 var default_request_options_service_1 = require('./default-request-options.service');
 var app_component_1 = require('./app.component');
+var ng2_pagination_1 = require('ng2-pagination');
 var patient_component_1 = require('./Patient/patient.component');
 var AppModule = (function () {
     function AppModule() {
@@ -22,7 +23,8 @@ var AppModule = (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 http_1.HttpModule,
-                http_1.JsonpModule
+                http_1.JsonpModule,
+                ng2_pagination_1.Ng2PaginationModule
             ],
             declarations: [
                 app_component_1.AppComponent,
