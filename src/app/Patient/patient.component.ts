@@ -1,8 +1,9 @@
 // Observable Version
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 import { Patient }              from './patient';
 import { PatientService }       from './patient.service';
-
+import { serviceFilter } from './filter.pipe';
 @Component({
   moduleId: module.id,
   selector: 'patient-list',

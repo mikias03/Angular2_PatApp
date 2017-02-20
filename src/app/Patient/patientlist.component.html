@@ -1,14 +1,120 @@
-<div class="patient-list">
-	<h3>Patients:</h3>
-	<ul class="list-group">
-	  <li *ngFor="let patient of patients" class="list-group-item">
-	  <span style="padding-right: 30px; color: blue">{{patient.name}}</span>
-	  <span style="padding-left: 30px; padding-right: 30px">PatientID: {{patient.patientID}}</span>
-	  <span style="padding-left: 30px; padding-right: 30px">{{patient.dob}}</span>
-	  <span style="padding-left: 30px; padding-right: 30px">{{patient.serviceID}}</span>
-	  <span style="padding-left: 30px;">{{patient.service}}</span>
-	  </li>
-	</ul>
+<div class="container-fixed">
+		<div class="row">
+			<div class="col-xs-12" style="margin-left: 10px;">
+				<label>Cases:</label>
+			</div>
+			
+	    	<div class="col-sm-12">
+	    		<div class="col-xs-3" style="background-color: #fff; margin: 15px; padding: 3px;">Completed Cases over the past 7 days</div>
+	    	</div>
+	    </div>
 
+	    <!-- Title and counts here -->
+	    <div class="row content-holder">
+	        <div class="col-xs-2 contents">
+		        
+		        	<div class="row">
+		        		<div class="col-xs-9 title">
+		        		Benefits Verification</div>
+		        		<div class=" col-xs-3 count">14</div>
+		        	</div>
+	        </div>
+	        <div class="col-xs-2 contents">
+		        
+		        	<div class="row">
+		        		<div class="col-xs-9 title">
+		        		Benefits Verification</div>
+		        		<div class=" col-xs-3 count">14</div>
+		        	</div>
+	        </div>
+	        <div class="col-xs-2 contents">
+		        
+		        	<div class="row">
+		        		<div class="col-xs-9 title">
+		        		Benefits Verification</div>
+		        		<div class=" col-xs-3 count">14</div>
+		        	</div>
+	        </div>
+	        <div class="col-xs-2 contents">
+		        
+		        	<div class="row">
+		        		<div class="col-xs-9 title">
+		        		Benefits Verification</div>
+		        		<div class=" col-xs-3 count">14</div>
+		        	</div>
+	        </div>
+	        <div class="col-xs-2 contents">
+		        
+		        	<div class="row">
+		        		<div class="col-xs-9 title">
+		        		Benefits Verification</div>
+		        		<div class=" col-xs-3 count">14</div>
+		        	</div>
+	        </div>
+
+	        <!-- Currents cases -->
+	        <div class="row">
+		    	<div class="col-sm-12">
+		    		<div class="col-xs-3" style="background-color: #fff; margin-top: 10px; padding: 5px;">Current Cases</div>
+		    	</div>
+	    	</div>
+	    </div>
+	    
+	    <!-- Fitler option -->
+
+	    <div class="row">
+	    	<div class="col-sm-12">
+	    		<div class="col-xs-3" style="margin-left: 15px; margin-top: 15px; margin-bottom: 3px;">
+	    			<span style="background-color: #fff; padding-left: 10px; padding-right: 10px; padding-bottom: 3px; padding-top: 3px;">Filter options</span>
+	    		</div>
+	    	</div>
+	    </div>
+
+
+
+
+	    <!-- populating patient list here -->
+	    <div class="row content-holder-list">
+		    <div class="col-xs-12 keys" style="border: 1.5px solid #737373; margin: 5px; background-color: #fff; padding: 5px;">
+		        	<span class="keyList">Service types:</span>
+		        	<span class="keyBV">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		        	<span class="keyList">Benefits verfication</span>
+		        	<span class="keyPA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		        	<span class="keyList">Prior Authorization</span>
+		        	<span class="keyCoPay">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		        	<span class="keyList">CoPay</span>
+		        	<span class="keyPAP">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		        	<span class="keyList">PAP</span>
+		        	<span class="keyPR">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		        	<span class="keyList">Prescription referal</span>
+
+		        </div>
+
+		        
+	        <div class="col-xs-12 content">
+
+	        
+	        	<div class="patient-list">
+		
+					<ul class="list-group">
+					
+					  <li *ngFor="let patient of patients" class="list-group-item" style="border-color: #7b7c7c; margin: 5px; align-items: center;">
+					  <span style="color: blue">{{patient.name}}</span>
+					  <span style="padding-left: 30px; padding-right: 30px">Patient ID: {{patient.patientID}}</span>
+					  <span style="padding-left: 30px; padding-right: 30px">Date of birth: {{patient.dob}}</span>
+					  <span style="padding-left: 30px; padding-right: 30px" >Service ID: {{patient.serviceID}}</span>
+					  <span *ngIf="patient.service === 'CoPay'" class="service1">{{patient.service}}</span>
+					  <span *ngIf="patient.service === 'BV'" class="service2">{{patient.service}}</span>
+					  <span *ngIf="patient.service === 'PA'" class="service3">{{patient.service}}</span>
+			
+
+					  </li>
+					</ul>
+
+				</div>
+	        </div>
+	     </div>
+	    
 </div>
-<p class="error" *ngIf="errorMessage">{{errorMessage}}</p>
+	
+
