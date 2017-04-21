@@ -1,0 +1,42 @@
+<div class="progress-section">
+    <ul class="progress-list">
+
+        <li [class.active-item]="aboutme.iscompleted" (click)="goToStage(aboutme)">
+            <i class="fa fa-check-circle"></i>
+            <span [class.active-title]="aboutme.isactive">About me</span>
+        </li>
+
+        <li class="right-arrow"><i class="fa fa-long-arrow-right" [class.active-arrow]="whatINeed.iscompleted || whatINeed.isactive"></i></li>
+
+        <li [class.active-item]="whatINeed.iscompleted" (click)="goToStage(whatINeed)">
+            <i class="fa fa-check-circle"></i>
+            <span [class.active-title]="whatINeed.isactive">What I Need</span>
+        </li>
+
+        <li class="right-arrow"><i class="fa fa-long-arrow-right" [class.active-arrow]="vehicle.iscompleted || vehicle.isactive"></i></li>
+
+        <li [class.active-item]="vehicle.iscompleted" (click)="goToStage(vehicle)">
+            <i class="fa fa-check-circle"></i>
+            <span [class.active-title]="vehicle.isactive">Vehicle</span>
+        </li>
+
+        <li class="right-arrow"><i class="fa fa-long-arrow-right" [class.active-arrow]="drivers.iscompleted || drivers.isactive"></i></li>
+
+        <li [class.active-item]="drivers.iscompleted" (click)="goToStage(drivers)">
+            <i class="fa fa-check-circle"></i>
+            <span [class.active-title]="drivers.isactive">Drivers</span>
+        </li>
+
+        <li class="right-arrow"><i class="fa fa-long-arrow-right" [class.active-arrow]="coverage.iscompleted || coverage.isactive"></i></li>
+
+        <li [class.active-item]="coverage.iscompleted" (click)="goToStage(coverage)">
+            <i class="fa fa-check-circle"></i>
+            <span [class.active-title]="coverage.isactive">My Coverage</span>
+        </li>
+    </ul>
+    <div class="bottom-divider"></div>
+</div>
+
+<!--<div style="padding: 20px;">
+    <router-outlet></router-outlet>
+</div>-->

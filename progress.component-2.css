@@ -1,0 +1,131 @@
+.progress-section {
+    background-color: #DBDBDB;
+    border-top: 2px solid #C0C0C0;
+    border-bottom: 1px solid #C0C0C0;
+}
+
+.bottom-divider {
+    height: 1px;
+    width: 100%;
+    background-color: #FFF;
+}
+
+.progress-list {
+    padding: 15px 60px;
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: table;
+}
+
+.progress-list>li {
+    display: table-cell;
+    vertical-align: top;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #888888;
+    cursor: pointer;
+}
+
+.progress-list>li.right-arrow {
+    cursor: default;
+}
+
+.progress-list>li>i {
+    color: #2477BF;
+    font-size: 20px;
+    margin-right: 6px;
+    opacity: 0;
+    width: 0;
+    transform: scale(0.8);
+    transition: 0.3s ease-out;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.progress-list>li>span {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.progress-list>li.right-arrow>i {
+    font-size: 20px;
+    color: #888888;
+    opacity: 1;
+    width: auto;
+    transform: scale(1);
+    margin-right: 0;
+}
+
+.active-arrow {
+    color: #484848 !important;
+}
+
+.active-title {
+    color: #484848 !important;
+    font-weight: bold;
+}
+
+.active-item {
+    color: #484848 !important;
+    font-weight: bold;
+}
+
+.active-item>i {
+    width: 20px !important;
+    opacity: 1!important;
+    transform: scale(1)!important;
+}
+
+@media screen and (max-width: 993px) {
+    .progress-list {
+        width: auto;
+        display: block;
+        padding: 15px 10px;
+    }
+    .progress-list>li {
+        display: inline-block;
+        padding: 0 3px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .progress-list {
+        padding: 15px 0px;
+    }
+    .progress-list>li {
+        padding: 0 2px;
+        font-size: 12px;
+        position: relative;
+    }
+    .progress-list>li>span {
+        display: block;
+        text-align: center;
+
+    }
+    .progress-list>li>i {
+        display: inline-block;
+        margin-bottom: 7px;
+        margin-right: 0;
+        width: 100%;
+    }
+    .progress-list>li.right-arrow>i {
+        margin-bottom: 0;
+        margin-top: 24px;
+    }
+}
+
+@media screen and (max-width: 472px) {
+    .progress-list>li {
+        padding: 0;
+        font-size: 12px;
+        position: relative;
+    }
+
+    .progress-list>li>span{
+        max-width: 45px;
+    }
+}
